@@ -18,7 +18,7 @@ namespace ExtraPrefabs
 			};
 		}
 
-        public override void OnEntityPrefabCreation(int entityId, GameObject prefabObj)
+		public override void OnEntityPrefabCreation(int entityId, GameObject prefabObj)
 		{
 			ModAssetBundle Bundle = ModAssetBundle.GetAssetBundle("extraprefabs");
 
@@ -42,7 +42,7 @@ namespace ExtraPrefabs
 			}
 		}
 
-        public void RegisterPrefabs()
+		public void RegisterPrefabs()
 		{
 			// Variable declaration
 			ModAssetBundle Bundle = ModAssetBundle.GetAssetBundle("extraprefabs");
@@ -51,62 +51,62 @@ namespace ExtraPrefabs
 			GameObject entityLook;
 
 			// Prefabs and prefab looks
-            #region Bush
+			#region Bush
 
-            prefab = GetPrefab((int)Foliage.Bush);
-            GetEntityLook(prefab, 1).SetActive(false); // Fix ghost prefab
+			prefab = GetPrefab((int)Foliage.Bush);
+			GetEntityLook(prefab, 1).SetActive(false); // Fix ghost prefab
 
-            entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("Bush"));
-            RegisterPrefabLook("Bush Frozen", LocalisationConstants.Blue, prefab, entityLook);
-            #endregion
+			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("Bush"));
+			RegisterPrefabLook("Bush Frozen", LocalisationConstants.Blue, prefab, entityLook);
+			#endregion
 
-            #region FirTree
+			#region FirTree
 
-            prefab = GetPrefab((int)Foliage.FirTree);
-            entityLook = GetEntityLook(prefab, 1);
+			prefab = GetPrefab((int)Foliage.FirTree);
+			entityLook = GetEntityLook(prefab, 1);
 			// Fix Snowy Tree collision particles
 			if (entityLook != null)
-            {
-                ParticleOnCollide particleCollide = prefab.transform.GetComponent<ParticleOnCollide>();
-                ParticleSystem p = entityLook.transform.FindChild("Particle System").GetComponent<ParticleSystem>();
-                if (particleCollide.extraParticles == null)
-                {
-                    particleCollide.extraParticles = p;
-                }
-            }
-            #endregion
+			{
+				ParticleOnCollide particleCollide = prefab.transform.GetComponent<ParticleOnCollide>();
+				ParticleSystem p = entityLook.transform.FindChild("Particle System").GetComponent<ParticleSystem>();
+				if (particleCollide.extraParticles == null)
+				{
+					particleCollide.extraParticles = p;
+				}
+			}
+			#endregion
 
-            #region Tree
+			#region Tree
 
-            prefab = GetPrefab((int)Foliage.Tree);
-            entityLook = UnityEngine.Object.Instantiate(prefab.transform.FindChild("BigTree 1").gameObject);
-            MeshRenderer[] meshes = entityLook.GetComponentsInChildren<MeshRenderer>(true);
-            Material dotaBush = Bundle.LoadAsset<Material>("DotaBushDarker 1");
-            foreach (MeshRenderer mesh in meshes)
-            {
-                if (mesh.name.Contains("DotaBush"))
-                {
-                    mesh.material = dotaBush;
-                }
-            }
-            FixShaderReferences(entityLook);
-            RegisterPrefabLook("BigTree Calm", LocalisationConstants.Normal, prefab, entityLook);
+			prefab = GetPrefab((int)Foliage.Tree);
+			entityLook = UnityEngine.Object.Instantiate(prefab.transform.FindChild("BigTree 1").gameObject);
+			MeshRenderer[] meshes = entityLook.GetComponentsInChildren<MeshRenderer>(true);
+			Material dotaBush = Bundle.LoadAsset<Material>("DotaBushDarker 1");
+			foreach (MeshRenderer mesh in meshes)
+			{
+				if (mesh.name.Contains("DotaBush"))
+				{
+					mesh.material = dotaBush;
+				}
+			}
+			FixShaderReferences(entityLook);
+			RegisterPrefabLook("BigTree Calm", LocalisationConstants.Normal, prefab, entityLook);
 			RenamePrefabLook(prefab, 0, LocalisationConstants.Wind);
-            #endregion
+			#endregion
 
-            #region IvyLeaves
+			#region IvyLeaves
 
-            prefab = GetPrefab((int)Foliage.IvyLeaves);
+			prefab = GetPrefab((int)Foliage.IvyLeaves);
 			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("IvyFrozen"));
 			RegisterPrefabLook("Frozen", LocalisationConstants.Blue, prefab, entityLook);
 
 			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("IvyFrozen 1"));
 			RegisterPrefabLook("Frozen 1", LocalisationConstants.Snowy, prefab, entityLook);
-            #endregion
+			#endregion
 
-            #region SimpleWall
+			#region SimpleWall
 
-            prefab = GetPrefab((int)Brick.SimpleWall);
+			prefab = GetPrefab((int)Brick.SimpleWall);
 			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("SimpleWall"));
 			RegisterPrefabLook("SimpleWall2", LocalisationConstants.Variant2, prefab, entityLook);
 
@@ -119,11 +119,11 @@ namespace ExtraPrefabs
 			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("SimpleWallWindowFlat"));
 			RegisterPrefabLook("SimpleWall5", LocalisationConstants.Variant5, prefab, entityLook);
 			RenamePrefabLook(prefab, 0, LocalisationConstants.Variant1);
-            #endregion
+			#endregion
 
-            #region BigRock
+			#region BigRock
 
-            prefab = GetPrefab((int)Foliage.BigRock);
+			prefab = GetPrefab((int)Foliage.BigRock);
 			entityLook = CustomPrefab(Bundle.LoadAsset<GameObject>("SandboxRock"));
 			RegisterPrefabLook("SandboxRock", LocalisationConstants.AncientStone, prefab, entityLook);
 			#endregion
@@ -140,15 +140,15 @@ namespace ExtraPrefabs
 			}
 			FixShaderReferences(entityLook);
 			RegisterPrefabLook("SandboxArcherStatue", LocalisationConstants.AncientStone, prefab, entityLook);
-            #endregion
+			#endregion
 
-            // Other fixes
-            #region Fixes
+			// Other fixes
+			#region Fixes
 
-            FixFlameForPrefab(GetPrefab((int)Foliage.Bush));
-            FixFlameForPrefab(GetPrefab((int)Foliage.Tree)); 
-            #endregion
-        }
+			FixFlameForPrefab(GetPrefab((int)Foliage.Bush));
+			FixFlameForPrefab(GetPrefab((int)Foliage.Tree)); 
+			#endregion
+		}
 
 		public void ReplaceModdedPrefab(LevelPrefab prefab, GameObject entity)
 		{
@@ -160,14 +160,14 @@ namespace ExtraPrefabs
 		}
 
 		public GameObject CustomPrefab(GameObject obj)
-        {
+		{
 			FixShaderReferences(obj);
 			AddOutline(obj);
 			return obj;
-        }
+		}
 
 		public GameObject AddOutline(GameObject obj)
-        {
+		{
 			foreach(MeshRenderer mesh in obj.GetComponentsInChildren<MeshRenderer>(true))
 			{
 				cakeslice.Outline outline = mesh.gameObject.AddComponent<cakeslice.Outline>();
@@ -179,37 +179,37 @@ namespace ExtraPrefabs
 		// Shaders inside of asset bundles seem to be broken
 		public GameObject FixShaderReferences(GameObject obj)
 		{
-            Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
-            foreach (Renderer renderer in renderers)
-            {
-                foreach (Material material in renderer.materials)
-                {
-                    material.shader = Shader.Find(material.shader.name);
-                }
+			Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
+			foreach (Renderer renderer in renderers)
+			{
+				foreach (Material material in renderer.materials)
+				{
+					material.shader = Shader.Find(material.shader.name);
+				}
 
-            }
-            return obj;
+			}
+			return obj;
 		}
 
 		public void FixFlameForPrefab(LevelPrefab prefab)
 		{
 			FireController[] fireControllers = prefab.GetComponentsInChildren<FireController>(true);
 			if(fireControllers == null || fireControllers.Length == 0)
-            {
+			{
 				Debug.LogError("No FireController component in " + prefab.name);
 				return;
-            }
+			}
 			foreach (FireController fireController in fireControllers)
 			{
 				fireController.fireParticles = null;
 				fireController.additionalFireParticles = new ParticleSystem[0];
 				ParticleSystem[] particles = fireController.GetComponentsInChildren<ParticleSystem>(true);
 				foreach(ParticleSystem particle in particles)
-                {
+				{
 					if(particle.name.Equals("Fire Particles"))
-                    {
+					{
 						if(fireController.fireParticles == null)
-                        {
+						{
 							fireController.fireParticles = particle;
 						} else
 						{
@@ -217,7 +217,7 @@ namespace ExtraPrefabs
 						}
 
 					}
-                }
+				}
 			}
 		}
 
@@ -229,10 +229,10 @@ namespace ExtraPrefabs
 		public void RegisterPrefabLook(string name, int locId, LevelPrefab prefab, GameObject entityLook)
 		{
 			if(entityLook == null)
-            {
+			{
 				Debug.LogError("entityLook cannot be null");
 				return;
-            }
+			}
 			GenericEntity ge = prefab.GetComponent<GenericEntity>();
 			LevelMultiLookObject entity = ge as LevelMultiLookObject;
 			if (entity == null && ge.GetType() == typeof(GenericEntity)) // Is normal GenericEntity
