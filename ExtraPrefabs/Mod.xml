@@ -1,0 +1,51 @@
+<Mod>
+	<Name>Extra Prefabs</Name>
+
+	<Author>Lassebq</Author>
+
+	<Version>0.1.0</Version>
+	
+	<Description>Adds a whole bunch of game prefabs which aren't available in the editor</Description>
+
+	<Icon name="icon" />
+
+	<!-- <WorkshopThumbnail name="thumbnail" /> -->
+
+	<Debug>true</Debug>
+
+	<MultiplayerCompatible>true</MultiplayerCompatible>
+
+	<LoadInTitleScreen />
+
+	<Assemblies>
+		<Assembly path="ExtraPrefabs.dll" />
+	</Assemblies>
+
+	<Blocks>
+	</Blocks>
+
+	<Entities>
+		<Entity path="SandboxArch.xml" />
+		<Entity path="DragonSkull.xml" />
+	</Entities>
+
+	<Triggers>
+
+	</Triggers>
+	
+	<Events>
+
+	</Events>
+	
+	<Keys>
+		
+	</Keys>
+	
+	<Resources>
+		<AssetBundle name="extraprefabs" path="extraprefabs" />
+		<Texture name="icon" path="icon.png" />
+	</Resources>
+
+	<ID>11d90bb3-0fad-4c32-911a-94794ab23a39</ID>
+
+</Mod>

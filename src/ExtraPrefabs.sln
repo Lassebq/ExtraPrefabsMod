@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{b564f2b6-01a6-4160-8bc1-96aed1010d6a}") = "ExtraPrefabs", "ExtraPrefabs\ExtraPrefabs.csproj", "{559e3743-454d-47b2-97d1-e2aa49b830bf}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{559e3743-454d-47b2-97d1-e2aa49b830bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559e3743-454d-47b2-97d1-e2aa49b830bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559e3743-454d-47b2-97d1-e2aa49b830bf}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559e3743-454d-47b2-97d1-e2aa49b830bf}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {b039a308-145f-41ac-8937-abea148596c4}
+	EndGlobalSection
+EndGlobal
