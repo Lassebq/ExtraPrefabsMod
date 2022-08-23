@@ -5,6 +5,8 @@ namespace ExtraPrefabs
 	{
 		public const int
 		SandboxArch = 1,
-		DragonSkull = 2;
+		DragonSkull = 2,
+		DragonWing = 3,
+		FrozenTree = 4;
 	}
 }

@@ -3,7 +3,7 @@
 	<ID>2</ID>
 	<Mesh name="none" />
 	<Texture name="none"/>
-	<Icon name="icon" />
+	<Icon name="prefab_dragonfossil" />
 	<Category>Buildings</Category>
 	<Colliders>
 		<BoxCollider>

@@ -38,6 +38,8 @@
 		Large = 3839,
 		Custom = 2453,
 		Smooth = 2461,
-		Wind = 2310;
+		Wind = 2310,
+		Valfross = 3248,
+		Bush = 2263;
 	}
 }

@@ -27,6 +27,8 @@
 	<Entities>
 		<Entity path="SandboxArch.xml" />
 		<Entity path="DragonSkull.xml" />
+		<Entity path="DragonWing.xml" />
+		<Entity path="FrozenTree.xml" />
 	</Entities>
 
 	<Triggers>
@@ -44,6 +46,11 @@
 	<Resources>
 		<AssetBundle name="extraprefabs" path="extraprefabs" />
 		<Texture name="icon" path="icon.png" />
+		<Texture name="prefab_dragonfossil" path="prefab/dragonfossil.png" />
+		<Texture name="prefab_dragonfossil2" path="prefab/dragonfossil2.png" />
+		<Texture name="prefab_dragonskull" path="prefab/dragonskull.png" />
+		<Texture name="prefab_arch" path="prefab/arch.png" />
+		<Texture name="prefab_frozentree" path="prefab/frozentree.png" />
 	</Resources>
 
 	<ID>11d90bb3-0fad-4c32-911a-94794ab23a39</ID>
